@@ -16,6 +16,17 @@ $(document).ready(function(){
 		});
 	});
 
+	// Collapse mobile menu on link click
+
+	$("#top-nav-items a").click(function(event) {
+		var windowWidth = $(window).width();
+
+		if ( windowWidth < 768 && $(".navbar-collapse").hasClass("in") ) {
+			$(".navbar-collapse").collapse("hide");
+		}
+
+	});
+
 	// Initiate the bootstrap popovers
 
 	$('[data-toggle="popover"]').popover({html:true});
